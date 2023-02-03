@@ -1,0 +1,258 @@
+.menu {
+  overflow: hidden;
+  height: 100vh;
+}
+
+html,
+body,
+header {
+  width: 100%;
+  height: 100%;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  overflow: hidden;
+  position: fixed;
+}
+
+/*---------------TEXTOS--------------- */
+/*------------------------------------ */
+
+/*----- MAIN----- */
+.contenido {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.texto {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: max(0.9vw, 1rem);
+  max-width: 43ch;
+  line-height: normal;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.3rem;
+}
+
+/*-----LOGOTYPE----- */
+
+.espaciologo {
+  position: fixed;
+  z-index: 3;
+  top: 1.2vh;
+  left: 1.5vw;
+  width: max-content;
+}
+
+.logo {
+  width: max(2.5vw, 60px);
+}
+
+/*----- ADRESS----- */
+
+.espacioinfo {
+  position: fixed;
+  z-index: 5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 1.7vw;
+  bottom: 1vh;
+  right: 1.5vw;
+}
+
+.info {
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 1vw;
+}
+
+/*----- MAIL----- */
+
+/* .espaciomail {
+  position: fixed;
+  z-index: 5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 1.7rem;
+  bottom: 1vh;
+  left: 2.5vh;
+}
+
+.mail {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 1.7rem;
+} */
+
+/*----- INSTA----- */
+
+.instagram {
+  position: fixed;
+  z-index: 4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: max(0.8vw, 15px);
+  bottom: 1.3vh;
+  right: 1.5vw;
+}
+
+.textoinstagram {
+  text-align: right;
+}
+
+a,
+a:link,
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*------------------------------------ */
+/*------------------------------------ */
+
+.menu--wrapper {
+  counter-reset: count;
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+.menu--item {
+  counter-increment: count;
+  position: absolute;
+  height: auto;
+
+  left: 0;
+
+  display: flex;
+
+  width: 30vw;
+  overflow: hidden;
+  padding-left: 0.2%;
+  padding-right: 0.2%;
+}
+img {
+  width: 100%;
+}
+
+.enlace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-top: 2.3rem;
+}
+
+/*-----------------PHONE---------------------*/
+
+@media screen and (max-width: 600px) {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu--wrapper {
+    counter-reset: count;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-type: x proximity;
+
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .menu--item {
+    counter-increment: count;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    left: 0;
+    display: flex;
+    scroll-padding-block: 0;
+    scroll-snap-stop: always;
+
+    overflow: hidden;
+    padding-left: 0.2%;
+    padding-right: 0.2%;
+  }
+
+  .texto {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: max(3vw, 12px);
+    line-height: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .espacioinfo {
+    display: none;
+  }
+
+  .espaciologo {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 1.2vh;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: max(11vw, 20px);
+    /* max-width: 125px;
+    min-width: 90px; */
+  }
+  .espaciomail {
+    display: none;
+  }
+  .instagram {
+    position: fixed;
+    z-index: 4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: white;
+    font-size: 3vw;
+    bottom: 1.3vh;
+    width: 100%;
+  }
+
+  .textoinstagram {
+    text-align: center;
+    color: white;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
